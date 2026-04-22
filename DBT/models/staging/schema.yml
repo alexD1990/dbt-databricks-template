@@ -1,0 +1,11 @@
+version: 2
+models:
+  - name: stg_dbt_test
+    description: "DBT test — confirms that dbt works against Databricks. Can be deleted."
+    columns:
+      - name: dbt_test
+        description: "Should always return the value 1"
+        tests:
+          - not_null
+          - accepted_values:
+              values: [1]
