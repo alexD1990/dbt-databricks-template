@@ -1,0 +1,11 @@
+your_project: # change: project name (must match name in dbt_project.yml)
+  target: dev
+  outputs:
+    dev:
+      type: databricks
+      host: <server-hostname>.azuredatabricks.net # change: your Databricks workspace hostname
+      http_path: /sql/1.0/warehouses/<warehouse-id> # change: your warehouse or cluster http_path
+      token: "{{ env_var('DBT_ACCESS_TOKEN') }}" # change: env var name if different
+      catalog: <your_catalog> # change: your Unity Catalog name
+      schema: <your_schema> # change: your default schema
+      threads: 8
