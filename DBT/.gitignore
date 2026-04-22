@@ -1,0 +1,13 @@
+# dbt artifacts
+# dbt artifacts
+target/
+logs/
+# Sensitive config — place profiles.yml in ~/.dbt/ locally
+profiles.yml
+# Python
+__pycache__/
+*.pyc
+.env
+# OS
+.DS_Store
+Thumbs.db
